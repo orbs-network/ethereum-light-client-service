@@ -10,4 +10,4 @@
 #    --base-path /opt/orbs/cache \
 #    --nat upnp
 
-geth --syncmode light --datadir /opt/orbs/cache --rpc --rpcaddr 0.0.0.0 --nat upnp
+geth --syncmode light --datadir /opt/orbs/cache --rpc --rpcaddr 0.0.0.0 --rpcvhosts '*' --nat upnp
