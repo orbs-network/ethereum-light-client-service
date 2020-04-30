@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export CHAIN=${CHAIN-mainnet}
+
+parity --light \
+   --jsonrpc-interface=all \
+   --jsonrpc-hosts=all \
+   --chain=$CHAIN \
+   --log-file=/opt/orbs/logs/parity.log \
+   --base-path=/opt/orbs/cache \
+   --nat=upnp \
+   --logging=debug
+
+# geth --syncmode light --datadir /opt/orbs/cache --rpc --rpcaddr 0.0.0.0 --rpcvhosts '*' --nat upnp
